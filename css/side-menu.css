@@ -1,0 +1,104 @@
+/* Оформление панели */
+#header-checkbox {
+    display: none;
+}
+
+.header-panel {
+    position: absolute;
+    z-index: 999;
+    top: 75px;
+    right: -230px;
+    background: #fff;
+    transition: all 0.5s;
+    width: 232px;
+    height: 766px;
+    color: #000;
+    opacity: 0;
+    box-shadow: 0px 10px 10px 0px rgba(50, 50, 50, 0.3);
+}
+
+.header-panel::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -1px;
+    left: -1368px;
+    background-color: rgba(0,0,0,0.5);
+    width: 1368px;
+    height: 766px;
+}
+
+/* Переключатели кнопки 1 */
+.header-button-1 .header-close {
+    display: none;
+}
+
+#header-checkbox:checked + .header-panel + .header-button-1-wr .header-button-1 .header-open {
+    display: none;
+}
+
+#header-checkbox:checked + .header-panel + .header-button-1-wr .header-button-1 .header-close {
+    display: block;
+}
+
+#header-checkbox:checked + .header-panel {
+    right: -230px;
+    opacity: 1;
+}
+
+/* Оформление кнопки на панеле */
+.header-button-2 {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 9px;
+    cursor: pointer;
+    transform: rotate(45deg);
+    color: #6F6E6E;
+    font-size: 32px;
+}
+
+.header-button-2:hover {
+    color: #000;
+}
+
+.header-b {
+    cursor: pointer;
+}
+
+.header-title {
+    display: block;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 37px 0 4px 34px;
+}
+
+.header-items {
+    margin: 0;
+    padding: 0;
+}
+
+.header-items-list {
+    list-style-type: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 20px 0 0 33px;
+}
+
+.header-items-list a {
+    text-decoration: none;
+    color: #F16D7F;
+}
+
+.header-list {
+    list-style-type: none;
+    text-transform: capitalize;
+    padding: 12px 0 0 21px;
+}
+
+.header-list a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #000;
+}
