@@ -1,0 +1,120 @@
+/* 
+############################################################  
+Start registration page 
+############################################################ 
+*/
+.main-registration {
+    @include flex-justify;
+    padding: 64px 230px 96px 230px;
+
+    &-fieldset {
+        border: none;
+        @include marg-pad-0;
+    }
+
+    &-span {
+        display: block;
+        margin: 0 0 20px 0;
+        font-size: 16px;
+        color: #222222;
+
+        &-margin {
+            margin: 34px 0 20px 0;
+        }
+    }
+
+    &-input {
+        display: block;
+        margin: 0 0 20px 0;
+        padding: 0 0 0 16px;
+        width: 360px;
+        height: 45px;
+        font-size: 13px;
+    }
+
+    &-input::-webkit-input-placeholder {
+        color: #B1B1B1;
+    }
+
+    &-input:-ms-input-placeholder {
+        color: #B1B1B1;
+    }
+
+    &-input::-ms-input-placeholder {
+        color: #B1B1B1;
+    }
+
+    &-input:-moz-placeholder {
+        color: #B1B1B1;
+    }
+
+    &-input::-moz-placeholder {
+        color: #B1B1B1;
+    }
+
+    &-p {
+        width: 360px;
+        color: #B1B1B1;
+        font-size: 13px
+    }
+
+    &-btn {
+        border: none;
+        background-color: $main-color;
+        text-transform: uppercase;
+        color: #fff;
+        padding: 13px 30px 16px 30px;
+    }
+
+    &-btn::after {
+        content: "\2192";
+        margin: 0 0 0 20px;
+        font-size: 20px;
+    }
+
+    &-btn:hover {
+        color: #000;
+        background-color: transparent;
+        outline: 1px solid black;
+    }
+
+    &-btn:active {
+        transform: $transform-scale;
+    }
+
+    &-info {
+        width: 652px;
+    }
+
+    &-info span {
+        font-size: 24px;
+        text-transform: uppercase;
+    }
+
+    &-info p {
+        font-size: 24px;
+    }
+
+    &-info ul {
+        margin: 0;
+        list-style-type: none;
+    }
+
+    &-list {
+        position: relative;
+        font-size: 24px;
+        margin: 16px 0;
+    }
+
+    &-list::before {
+        content: url(../img/check-mark.svg);
+        position: absolute;
+        left: -35px;
+    }
+}
+
+/* 
+############################################################  
+End registration page 
+############################################################ 
+*/

@@ -1,0 +1,130 @@
+/* 
+############################################################  
+Start footer 
+############################################################ 
+*/
+
+.subscribe {
+    @include flex-justify;
+    align-items: center;
+    @include page-padding;
+    text-align: center;
+    background-image: url(../img/subscribe-back.jpg);
+    min-height: 448px;
+    box-sizing: border-box;
+
+    &-comment span {
+        display: block;
+        padding: 30px 0 0 0;
+        width: 360px;
+        @include txt(20px, 400, #000);
+    }
+
+    &-email-heading {
+        display: block;
+        @include txt(24px, 700, #000);
+        text-transform: uppercase;
+    }
+
+    &-email-txt {
+        display: block;
+        @include txt(18px, 400, #000);
+        text-transform: uppercase;
+    }
+
+    &-email-form {
+        margin: 32px 0 0 0;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    &-email-input {
+        border-radius: 15px 0 0 15px;
+        width: 234px;
+        min-height: 50px;
+        background-color: #E1E1E1;
+        @include txt;
+        padding: 0 0 0 22px;
+        border: none;
+    }
+
+    &-email-btn {
+        width: 100px;
+        min-height: 50px;
+        border-radius: 0 15px 15px 0;
+        background-color: $main-color;
+        @include txt(14px, 400, #fff);
+        border: none;
+        cursor: pointer;
+    }
+
+    &-email-btn:hover {
+        box-shadow: 0 0 10px 0 $main-color;
+    }
+
+    &-email-btn:active {
+        transform: $transform-scale;
+    }
+}
+
+.copy {
+    @include flex-justify;
+    align-items: center;
+    @include page-padding;
+    background-color: #222222;
+
+    &-txt {
+        @include txt(16px, 400, #FBFBFB);
+    }
+
+    &-social {
+        @include flex-justify(flex, center);
+        align-items: center;
+
+        &-facebook,
+        &-instagram,
+        &-pinterest,
+        &-twiter {
+            border: none;
+            background-color: #fff;
+            margin: 24px 7px;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            @include flex-justify(flex, center);
+            align-items: center;
+        }
+
+        &-facebook:hover,
+        &-instagram:hover,
+        &-pinterest:hover,
+        &-twiter:hover {
+            background-color: $main-color;
+        }
+
+        &-facebook:active,
+        &-instagram:active,
+        &-pinterest:active,
+        &-twiter:active {
+            transform: $transform-scale;
+        }
+
+        &-svg {
+            fill: #000;
+            width: 40px;
+            height: 40px;
+            padding: 8px;
+        }
+
+        &-svg:hover {
+            fill: #fff;
+        }
+    }
+}
+
+/* 
+############################################################  
+End footer 
+############################################################ 
+*/

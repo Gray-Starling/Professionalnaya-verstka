@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,300&display=swap');
+@import "_mixins.scss";
+@import "_variables.scss";
+
+body {
+    @include marg-pad-0;
+    font-family: 'Lato', sans-serif;
+}
+
+.conteiner {
+    width: $page-width;
+    margin: 0 auto;
+}
+
+@import "_header.scss";
+@import "_main-menu.scss";
+@import "_conteiner-index.scss";
+@import "_conteiner-catalog.scss";
+@import "_conteiner-product.scss";
+@import "_conteiner-cart.scss";
+@import "_conteiner-registration.scss";
+@import "_footer.scss";
+
+//Сделать txt, посмотреть, где еще можно сыграть
+//Переименовать классы
+//переделать ховеры под одну стилистику
+//Адаптив
+
+//спросить про вложенности, может быть много
+// План: редактировать код, редактировать scss, адаптив
