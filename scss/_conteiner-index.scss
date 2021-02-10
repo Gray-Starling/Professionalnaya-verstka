@@ -1,0 +1,306 @@
+/* 
+############################################################  
+Start index page 
+############################################################ 
+*/
+
+.main-tagline {
+    display: flex;
+    background-color: #F1E4E6;
+
+    &-img {
+        display: block;
+        background-image: url(../img/layer_57_2.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        width: 800px;
+        min-height: 764px;
+
+    }
+
+    &-txt {
+        width: 405px;
+        position: relative;
+        margin: 290px 0 381px 63px;
+        padding: 0 0 0 16px;
+
+
+        &-firstrow {
+            margin: 0;
+            @include txt(lato, 900, normal, 48px, #000);
+            text-transform: uppercase;
+        }
+
+        &-secondrow {
+            margin: 0;
+            @include txt(lato, 700, normal, 32px, #000);
+            text-transform: uppercase;
+        }
+
+        &-secondrow span {
+            color: $main-color;
+        }
+    }
+
+    &-txt:before {
+        content: "";
+        position: absolute;
+        border-left: 12px solid $main-color;
+        right: 417px;
+        height: 92px;
+    }
+}
+
+.main-catalog {
+    @include flex-justify;
+    flex-wrap: wrap;
+    margin: 65px 230px 0 230px;
+
+    &-womenbox,
+    &-menbox,
+    &-kidsbox {
+        min-height: 260px;
+        width: 360px;
+        text-align: center;
+        @include txt(lato, 400, normal, 16px, #fff);
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    &-womenbox:hover,
+    &-menbox:hover,
+    &-kidsbox:hover,
+    &-accesories:hover {
+        transform: scale(1.1);
+    }
+
+    &-womenbox:active,
+    &-menbox:active,
+    &-kidsbox:active,
+    &-accesories:active {
+        transition: all 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transform: $transform-scale;
+    }
+
+    &-womenbox {
+        background-image: $bgimg-index-catalog, url(../img/1-for-women.jpg);
+    }
+
+    &-menbox {
+        background-image: $bgimg-index-catalog, url(../img/2-for-men.jpg);
+    }
+
+    &-kidsbox {
+        background-image: $bgimg-index-catalog, url(../img/3-for-kids.jpg);
+    }
+
+    &-accesories {
+        height: 180px;
+        width: 100%;
+        margin: 30px 0 0 0;
+        text-align: center;
+        @include txt(lato, 400, normal, 16px, #fff);
+        text-transform: uppercase;
+        text-decoration: none;
+        background-image: $bgimg-index-catalog, url(../img/4-accesories.jpg);
+        transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    &-desc {
+        display: block;
+        padding: 105px 0 0 0;
+    }
+
+    &-name,
+    &-desc span {
+        display: block;
+        @include txt(lato, 700, normal, 24px, $main-color);
+    }
+
+    &-inline-desc {
+        display: block;
+        padding: 65px 0 0 0;
+    }
+}
+
+.main-weekfeature {
+    width: 1140px;
+    margin: 96px auto 0 auto;
+
+    &-header {
+        text-align: center;
+
+        &-title {
+            display: block;
+            @include txt(lato, 400, normal, 30px, #222222);
+        }
+
+        &-desc {
+            @include txt(lato, 400, normal, 14px, #9F9F9F);
+            margin: 6px 0 18px 0;
+        }
+    }
+
+    &-products {
+        @include flex-justify;
+        flex-wrap: wrap;
+    }
+
+    &-prod {
+        width: 360px;
+        margin: 30px 0 0 0;
+        position: relative;
+        background-color: #F8F8F8;
+
+        &-title {
+            display: block;
+            @include txt(lato, 400, normal, 13px, #000);
+            text-transform: uppercase;
+            margin: 25px 0 0 18px;
+        }
+
+        &-desc {
+            @include txt(lato, 300, normal, 14px, #5D5D5D);
+            margin: 25px 24px 0 18px;
+            box-sizing: border-box;
+        }
+
+        &-price {
+            display: block;
+            @include txt(lato, 400, normal, 16px, $main-color);
+            margin: 18px 25px;
+        }
+    }
+
+    &-prod-img {
+        display: block;
+    }
+
+    &-prod:hover &-prod-img {
+        filter: brightness(50%);
+    }
+
+    &-prod:hover &-btn {
+        display: flex;
+        @include txt(lato, 400, normal, 14px, #fff);
+    }
+
+    &-prod:hover &-btn:hover {
+        background-color: rgba(58, 56, 56, 1);
+        border: 1px solid #000;
+    }
+
+    &-prod:hover &-btn:active {
+        color: $main-color;
+        transform: $transform-scale;
+    }
+
+    &-btn {
+        position: absolute;
+        top: 188px;
+        left: 111px;
+        width: 138px;
+        height: 43px;
+        background-size: 26px;
+        background-position: 10% 50%;
+        background-repeat: no-repeat;
+        background-image: url(../img/cart.svg);
+        border: 1px solid #fff;
+        background-color: transparent;
+        @include txt(14px, 400, #fff);
+        cursor: pointer;
+        @include flex-justify(none, flex-end);
+        align-items: center;
+        padding: 0 16px 0 0;
+    }
+
+    &-morelink {
+        display: block;
+        width: 211px;
+        margin: 48.5px auto 0 auto;
+        padding: 14.5px 38.5px 13.5px 38.5px;
+        border: 1px solid #FF6A6A;
+        text-align: center;
+        text-decoration: none;
+        @include txt(lato, 400, normal, 16px, $main-color);
+    }
+
+    &-morelink:hover {
+        background-color: $main-color;
+        color: #fff;
+    }
+
+    &-morelink:active {
+        transform: $transform-scale;
+    }
+}
+
+.main-feature {
+    @include flex-justify;
+    align-items: center;
+    @include page-padding;
+    margin: 95px 0 0 0;
+    background-color: #222222;
+    @include txt(14px, 400, #fff);
+
+    &-box1,
+    &-box2,
+    &-box3 {
+        position: relative;
+        width: 360px;
+        text-align: center;
+        margin: 103px 0;
+        box-sizing: border-box;
+    }
+
+    &-box1:before,
+    &-box2:before,
+    &-box3:before {
+        content: "";
+        position: absolute;
+        margin: auto;
+        background-repeat: no-repeat;
+        background-position: 50% 0%;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 50px;
+        width: 50px;
+    }
+
+    &-box1:before {
+        background-image: url(../img/delivery.svg);
+        background-size: 45px 32px;
+    }
+
+    &-box2:before {
+        background-image: url(../img/discounts.svg);
+        background-size: 40px;
+    }
+
+    &-box3:before {
+        background-image: url(../img/quality.svg);
+        background-size: 47px 35px;
+    }
+
+    &-title {
+        display: block;
+        @include txt(lato, 400, normal, 20px, #FBFBFB);
+        padding: 59px 0 16px 0;
+    }
+
+    &-desc {
+        margin: 0;
+        padding: 0 20px 0 20px;
+        box-sizing: border-box;
+        @include txt(lato, 300, normal, 14px, #FBFBFB);
+    }
+}
+
+/* 
+############################################################  
+End index page
+############################################################ 
+*/

@@ -1,0 +1,34 @@
+@import "_scss-mixins.scss";
+@import "_scss-variables.scss";
+@import "_scss-fonts.scss";
+
+body {
+    @include marg-pad-0;
+    max-width: $page-width;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.conteiner {
+    width: 100%;
+    margin: 0 auto;
+}
+
+@import "_header.scss";
+@import "_main-menu.scss";
+@import "_conteiner-index.scss";
+@import "_conteiner-catalog.scss";
+@import "_conteiner-product.scss";
+@import "_conteiner-cart.scss";
+@import "_conteiner-registration.scss";
+@import "_footer.scss";
+
+//Сделать txt, посмотреть, где еще можно сыграть
+//Переименовать классы
+//переделать ховеры под одну стилистику
+//Адаптив
+
+
+// План: редактировать код, редактировать scss, адаптив
+
+//roboto

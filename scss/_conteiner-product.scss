@@ -1,0 +1,190 @@
+/* 
+############################################################  
+Start product page
+############################################################ 
+*/
+.main-product-slider {
+    min-height: 777px;
+    @include flex-justify;
+    align-items: center;
+    background-color: #F7F7F7;
+
+    &-leftarrow,
+    &-rightarrow {
+        width: 47px;
+        height: 47px;
+        background-color: rgba(42, 42, 42, 0.15);
+    }
+
+    &-leftarrow button,
+    &-rightarrow button {
+        background-color: transparent;
+        border: none;
+        width: 47px;
+        height: 47px;
+        @include flex-justify(flex, center);
+        align-items: center;
+        padding: 0;
+    }
+
+    &-leftarrow button:hover &-leftarrow-svg,
+    &-rightarrow button:hover &-rightarrow-svg {
+        fill: red;
+    }
+
+    &-leftarrow button:active,
+    &-rightarrow button:active {
+        transform: $transform-scale;
+    }
+
+    &-leftarrow-svg,
+    &-rightarrow-svg {
+        width: 12px;
+        height: 21px;
+        padding: 0;
+    }
+}
+
+.main-product-desc {
+    position: absolute;
+    top: -65px;
+    @include flex-justify(flex, space-around);
+    flex-direction: column;
+    align-items: center;
+    width: 1141px;
+    min-height: 600px;
+    border: 1px solid #EAEAEA;
+    background-color: #fff;
+
+    &-wp {
+        position: relative;
+        min-height: 600px;
+        @include page-padding;
+    }
+}
+
+.main-product-categoryname,
+.main-product-name,
+.main-product-price {
+    display: block;
+}
+
+.main-product-categoryname {
+    position: relative;
+    @include txt(lato, 300, normal, 14px, $main-color);
+    text-transform: uppercase;
+}
+
+.main-product-categoryname:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: $main-color;
+    width: 63px;
+    height: 3px;
+}
+
+.main-product-name {
+    @include txt(lato, 300, normal, 18px, #4D4D4D);
+    text-transform: uppercase;
+}
+
+.main-product-fulldesc {
+    text-align: center;
+    width: 570px;
+    @include txt(lato, 300, normal, 14px, #5E5E5E);
+    margin: 0;
+}
+
+.main-product-price {
+    @include txt(lato, 300, normal, 24px, $main-color);
+}
+
+.main-product-filter::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 400px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #EAEAEA;
+    width: 641px;
+    height: 3px;
+}
+
+.main-product-filter-color,
+.main-product-filter-size,
+.main-product-filter-quantity {
+    background-color: transparent;
+    border: none;
+    @include txt(lato, 400, normal, 14px, #6F6E6E);
+    text-transform: uppercase;
+    margin: 0 28px 0 0;
+    cursor: pointer;
+}
+
+.main-product-filter-color::after,
+.main-product-filter-size::after,
+.main-product-filter-quantity::after {
+    content: "\02C5";
+    margin: 0 0 0 10px;
+}
+
+.main-product-filter-color:hover,
+.main-product-filter-size:hover,
+.main-product-filter-quantity:hover {
+    background-color: $main-color;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.main-product-filter-color:active,
+.main-product-filter-size:active,
+.main-product-filter-quantity:active {
+    transform: $transform-scale;
+}
+
+.main-product-btn {
+    width: 211px;
+    height: 47px;
+    border: 1px solid $main-color;
+    background-color: transparent;
+    @include txt(lato, 400, normal, 16px, $main-color);
+    cursor: pointer;
+    @include flex-justify(flex, flex-start);
+    align-items: center;
+}
+
+.main-product-btn svg {
+    fill: $main-color;
+    margin: 0 23px;
+}
+
+.main-product-btn:hover {
+    background-color: $main-color;
+    color: #fff;
+}
+
+.main-product-btn:hover svg {
+    fill: #fff;
+}
+
+.main-product-btn:active {
+    transform: $transform-scale;
+}
+
+.main-product-custom {
+    @include page-padding;
+    margin: 0 0 128px 0;
+}
+
+/* 
+############################################################  
+End product page
+############################################################ 
+*/

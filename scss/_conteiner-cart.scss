@@ -1,0 +1,239 @@
+/* 
+############################################################  
+Start cart page 
+############################################################ 
+*/
+.main-cart {
+    @include flex-justify;
+    padding: 96px 230px 128px 230px;
+
+    &-picked-info {
+        display: flex;
+        margin: 0 0 40px 0;
+        box-shadow: 20px 20px 20px 1px rgba(50, 50, 50, 0.1);
+        transition: all 1s;
+
+        &-txt {
+            position: relative;
+            margin: 22px 0 0 31px;
+            width: 262px;
+        }
+
+        &-close {
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            font-size: 40px;
+            transform: rotate(45deg);
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        &-close:hover {
+            transform: scale(1.1) rotate(45deg);
+        }
+
+        &-close:active {
+            transform: scale(0.9) rotate(45deg);
+        }
+    }
+
+    &-picked-info:hover {
+        transform: scale(1.2);
+    }
+
+    &-picked-options {
+        @include flex-justify;
+    }
+
+    &-picked-clear,
+    &-picked-continue {
+        padding: 17px 40px;
+        background-color: transparent;
+        text-transform: uppercase;
+        @include txt(lato, 300, normal, 14px, #000);
+        font-size: 14px;
+        border: 1px solid #A4A4A4;
+        cursor: pointer;
+    }
+
+    &-picked-clear:hover,
+    &-picked-continue:hover {
+        background-color: $main-color;
+        color: #fff;
+    }
+
+    &-picked-clear:active,
+    &-picked-continue:active {
+        transform: $transform-scale;
+    }
+
+    &-order-adress span {
+        display: block;
+        margin: 0 0 20px 0;
+        @include txt(lato, 300, normal, 16px, #222222);
+        text-transform: uppercase;
+    }
+
+    &-order-fieldset {
+        @include marg-pad-0;
+        border: none;
+    }
+
+    &-order-input {
+        display: block;
+        margin: 0 0 20px 0;
+        padding: 0 0 0 16px;
+        width: 360px;
+        height: 45px;
+        @include txt(lato, 300, normal, 13px, #222222);
+    }
+
+    &-order-btn {
+        padding: 10px 15px;
+        background-color: transparent;
+        text-transform: uppercase;
+        @include txt(lato, 300, normal, 11px, #4A4A4A);
+        border: 1px solid #A4A4A4;
+        cursor: pointer;
+    }
+
+    &-order-btn:hover {
+        background-color: $main-color;
+        color: #fff;
+    }
+
+    &-order-btn:active {
+        transform: $transform-scale;
+    }
+
+    &-order-total {
+        margin: 57px 0 0 0;
+        padding: 40px 43px;
+        background-color: #F5F3F3;
+    }
+
+    &-order-sub {
+        @include flex-justify;
+        margin: 0 0 0 175px;
+    }
+
+    &-order-sub-txt {
+        display: block;
+        @include txt(lato, 400, normal, 11px, #4A4A4A);
+        text-transform: uppercase;
+    }
+
+    &-order-grand {
+        position: relative;
+        @include flex-justify;
+        margin: 0 0 0 110px;
+        padding: 12px 0;
+    }
+
+    &-order-grand::after {
+        content: "";
+        display: block;
+        margin: auto;
+        position: absolute;
+        top: 52px;
+        right: 10px;
+        width: 275px;
+        height: 1px;
+        background-color: #E2E2E2;
+    }
+
+    &-order-grand-txt {
+        display: block;
+        @include txt(lato, 300, normal, 16px, #4A4A4A);
+        text-transform: uppercase;
+    }
+
+    &-order-total-btn {
+        margin: 27px 0 0 0;
+        padding: 15px 0;
+        width: 100%;
+        @include txt(lato, 300, normal, 16px, #fff);
+        text-transform: uppercase;
+        background-color: $main-color;
+        border: none;
+        cursor: pointer;
+    }
+
+    &-order-total-btn:hover {
+        background-color: transparent;
+        color: #000;
+        outline: 1px solid;
+    }
+
+    &-order-total-btn:active {
+        transform: $transform-scale;
+    }
+}
+
+.picked-title {
+    display: block;
+    margin: 0 0 42px 0;
+    @include txt(lato, 400, normal, 24px, #222222);
+    line-height: 29px;
+    text-transform: uppercase;
+}
+
+.picked-txt {
+    position: relative;
+    display: block;
+    margin: 0 0 6px 0;
+    @include txt(lato, 400, normal, 22px, #575757);
+
+    &-price {
+        color: $main-color;
+    }
+
+    &-othercolor {
+        color: #6F6E6E;
+    }
+}
+
+.picked-quantity {
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 121px;
+    border: 1px solid #EAEAEA;
+    width: 44px;
+    @include txt(lato, 400, normal, 18px, #6F6E6E);
+    font-size: 18px;
+    text-align: center;
+    cursor: default;
+}
+
+.input-other-color::-webkit-input-placeholder {
+    color: #B1B1B1;
+}
+
+.input-other-color:-ms-input-placeholder {
+    color: #B1B1B1;
+}
+
+.input-other-color::-ms-input-placeholder {
+    color: #B1B1B1;
+}
+
+.input-other-color:-moz-placeholder {
+    color: #B1B1B1;
+}
+
+.input-other-color::-moz-placeholder {
+    color: #B1B1B1;
+}
+
+.order-grand-color {
+    @include txt(lato, 700, normal, 16px, $main-color);
+}
+
+/* 
+############################################################  
+End cart page 
+############################################################ 
+*/
