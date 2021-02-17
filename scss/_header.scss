@@ -1,0 +1,174 @@
+/* 
+############################################################  
+Start header 
+############################################################
+*/
+
+.header {
+	position: relative;
+	background-color: #222222;
+	@include flex-justify(flex, center);
+
+	&-wr {
+		width: 1140px;
+		padding: 0 32px;
+		@include flex-justify();
+	}
+
+	&-leftbox {
+		width: 111px;
+		@include flex-justify();
+		align-items: flex-end;
+		padding: 18px 0;
+
+		&-logo {
+			display: block;
+			width: 44px;
+			height: 38px;
+			background-image: url(../img/logo.png);
+			background-size: cover;
+			background-position: center;
+			transition: all 0.4s;
+		}
+
+		&-logo:hover {
+			transform: scale(1.1);
+		}
+
+		&-logo:active {
+			transform: $transform-scale;
+		}
+
+		&-form {
+			display: flex;
+			position: relative;
+		}
+
+		&-input {
+			position: absolute;
+			width: 0;
+			opacity: 0;
+			border: 2px solid #e8e8e8;
+			background: #222222;
+			padding: 2px 0;
+			transition: all 0.4s;
+			@include txt(lato, 400, normal, 14px, #e8e8e8);
+		}
+
+		&-input:focus {
+			width: 200px;
+			opacity: 1;
+			margin-left: 40px;
+		}
+
+		&-search-btn {
+			width: 27px;
+			height: 28px;
+			fill: #e8e8e8;
+			transition: all 0.4s;
+		}
+
+		&-search-btn:hover {
+			fill: #ababab;
+			cursor: pointer;
+			transform: scale(1.1);
+		}
+
+		&-search-btn:active {
+			cursor: pointer;
+			transform: scale(0.9);
+		}
+	}
+
+	&-rightbox {
+		@include flex-justify();
+		align-items: flex-end;
+		padding: 18px 0;
+		width: 168px;
+
+		&-userpage {
+			width: 32px;
+			height: 32px;
+			padding: 0;
+			background-color: transparent;
+			border: none;
+			display: flex;
+			justify-content: center;
+			cursor: pointer;
+			transition: all 0.4s;
+			&:hover {
+				transform: scale(1.1);
+			}
+			&:active {
+				transform: scale(0.9);
+			}
+			&:focus {
+				outline: transparent;
+				border: 1px solid #ababab;
+				border-radius: 10%;
+			}
+
+			&-svg {
+				fill: #e8e8e8;
+			}
+
+			&-svg:hover {
+				fill: #ababab;
+			}
+		}
+
+		&-cart {
+			position: relative;
+			width: 32px;
+			height: 32px;
+			padding: 0;
+			background-color: transparent;
+			display: flex;
+			justify-content: center;
+			border: none;
+			text-align: center;
+			font-size: 12px;
+			color: #fff;
+			cursor: pointer;
+			transition: all 0.4s;
+			&:hover {
+				transform: scale(1.1);
+			}
+			&:active {
+				transform: scale(0.9);
+			}
+			&:focus {
+				outline: transparent;
+				border: 1px solid #ababab;
+				border-radius: 10%;
+			}
+
+			&-svg {
+				fill: #e8e8e8;
+			}
+
+			&-svg:hover {
+				fill: #ababab;
+			}
+		}
+
+		&-cart:after {
+			position: absolute;
+			top: -10px;
+			right: -10px;
+			content: "5";
+			display: block;
+			width: 19px;
+			padding: 3px 0 3px 0;
+			border-radius: 50%;
+			background-color: $main-color;
+			@include txt(lato, 400, normal, 12px, #fff);
+		}
+	}
+}
+
+/* 
+############################################################  
+End header 
+############################################################ 
+*/

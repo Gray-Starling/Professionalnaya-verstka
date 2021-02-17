@@ -1,0 +1,303 @@
+/* 
+############################################################  
+Start catalog page
+############################################################ 
+*/
+.main-filter {
+	background-color: #f1e4e6;
+	padding: 60px 16px;
+	&-wp {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		max-width: 1140px;
+		margin: 0 auto 0 auto;
+	}
+
+	&-title {
+		@include txt(lato, 400, normal, 24px, $main-color);
+		text-transform: uppercase;
+	}
+
+	&-breadcrumb-inactive {
+		text-decoration: none;
+		text-transform: uppercase;
+		@include txt(lato, 300, normal, 14px, #636363);
+		&:hover {
+			text-decoration: underline;
+		}
+		&:active {
+			color: $main-color;
+		}
+	}
+	&-breadcrumb-active {
+		text-decoration: none;
+		text-transform: uppercase;
+		@include txt(lato, 700, normal, 14px, $main-color);
+		&:hover {
+			text-decoration: underline;
+		}
+		&:active {
+			border-bottom: 2px solid $main-color;
+			border-top: 2px solid $main-color;
+			text-decoration: none;
+		}
+	}
+}
+
+.main-sort {
+	width: 100%;
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 51px 0 0 0;
+
+	&-header {
+		@include flex-justify(flex, flex-start);
+		margin: 0 0 34px 0;
+	}
+
+	&-products {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	&-filter {
+		position: relative;
+		&-dropdown {
+			position: relative;
+		}
+		&-input,
+		&-panel {
+			display: none;
+		}
+		&-panel {
+			display: none;
+			position: absolute;
+			background: #fff;
+			box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
+			z-index: 9;
+			width: 360px;
+			& details {
+				margin: 16px 17px 18px 17px;
+			}
+		}
+		&-label {
+			cursor: pointer;
+			& div {
+				width: 70px;
+				@include flex-justify;
+				align-items: center;
+				padding: 2px 5px;
+				&:hover {
+					background-color: $main-color;
+					border-radius: 10px;
+					color: #fff;
+					& span {
+						color: #fff;
+					}
+					& svg {
+						fill: #fff;
+					}
+				}
+			}
+			& span {
+				@include txt(lato, 600, normal, 14px, #000);
+				text-transform: uppercase;
+			}
+		}
+		&-summary {
+			@include txt(lato, 400, normal, 14px, $main-color);
+			text-transform: uppercase;
+			border-bottom: 1px solid #ebebeb;
+			padding: 11px;
+			position: relative;
+			cursor: pointer;
+			&:before {
+				content: "";
+				position: absolute;
+				top: 5px;
+				left: 0;
+				border-left: 5px solid $main-color;
+				height: 37px;
+			}
+			&::-webkit-details-marker {
+				display: none;
+			}
+		}
+		&-ul {
+			list-style-type: none;
+			padding: 0 0 0 34px;
+		}
+		&-list {
+			display: block;
+			margin: 0 0 11px 0;
+		}
+		&-dropdown {
+			& a {
+				@include txt(lato, 400, normal, 14px, #6f6e6e);
+				text-decoration: none;
+			}
+			& :checked ~ .main-sort-filter-panel {
+				display: block;
+			}
+		}
+	}
+
+	&-optional {
+		@include flex-justify;
+		position: relative;
+		align-items: center;
+		margin: 0 0 0 306px;
+		width: 296px;
+
+		&-trendingnow,
+		&-size,
+		&-price {
+			background-color: transparent;
+			border: none;
+			@include txt(lato, 400, normal, 14px, #6f6e6e);
+			text-transform: uppercase;
+			cursor: pointer;
+		}
+
+		&-trendingnow::after,
+		&-size::after,
+		&-price::after {
+			content: "\02C5";
+			margin: 0 0 0 10px;
+		}
+
+		&-trendingnow:hover,
+		&-size:hover,
+		&-price:hover {
+			background-color: $main-color;
+			border-radius: 10px;
+			color: #fff;
+		}
+
+		&-trendingnow:active,
+		&-size:active,
+		&-price:active {
+			transform: $transform-scale;
+		}
+
+		&-size-input {
+			display: none;
+		}
+
+		&-size-panel {
+			position: absolute;
+			top: 20px;
+			left: 156px;
+			z-index: 999;
+			display: none;
+			background-color: #fff;
+			box-shadow: 0 0 10px 4 rgba(50, 50, 50, 0.3);
+			width: 80px;
+		}
+
+		&-size-input:checked ~ &-size-panel {
+			display: block;
+		}
+
+		&-size-panel ul {
+			list-style-type: none;
+			padding: 5px 0 5px 9px;
+			margin: 0;
+			text-transform: uppercase;
+			@include txt(roboto, 400, normal, 14px, #6f6e6e);
+		}
+
+		&-size-panel li {
+			margin: 5px 0 5px 0;
+		}
+
+		&-size-panel label,
+		&-size-panel input {
+			cursor: pointer;
+		}
+	}
+
+	&-pagination {
+		@include flex-justify;
+		align-items: center;
+		margin: 48px auto 0 auto;
+		padding: 12px 16px;
+		width: 203px;
+		border: 1px solid #ebebeb;
+
+		&-left,
+		&-right {
+			@include flex-justify(flex, center);
+			border: none;
+			background-color: transparent;
+			width: 9px;
+			height: 14px;
+			padding: 0;
+			align-items: center;
+		}
+
+		&-left:hover,
+		&-right:hover {
+			cursor: pointer;
+		}
+
+		&-svg {
+			fill: #000;
+			width: 8px;
+			height: 9px;
+		}
+
+		&-svg:hover {
+			fill: red;
+		}
+
+		&-svg:active {
+			fill: $main-color;
+			transform: $transform-scale;
+		}
+
+		&-ul {
+			padding: 0;
+			margin: 0 16px;
+			@include flex-justify;
+			@include txt(lato, 300, normal, 16px, #c4c4c4);
+			align-items: center;
+			width: 203px;
+			list-style: none;
+		}
+
+		&-list a {
+			display: block;
+			text-decoration: none;
+			color: #000;
+			opacity: 0.5;
+		}
+
+		&-list a:hover {
+			opacity: 1;
+			text-decoration: underline;
+		}
+
+		&-list a:active {
+			transform: $transform-scale;
+		}
+
+		&-list span {
+			opacity: 0.5;
+		}
+
+		&-list-active a {
+			color: $main-color;
+			opacity: 1;
+		}
+	}
+}
+/* 
+############################################################  
+End catalog page
+############################################################ 
+*/
