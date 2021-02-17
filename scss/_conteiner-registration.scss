@@ -1,0 +1,96 @@
+/* 
+############################################################  
+Start registration page 
+############################################################ 
+*/
+.main-registration {
+	@include flex-justify;
+	padding: 64px 0 96px 0;
+	&-wp {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		width: 100%;
+		max-width: 1140px;
+		margin: 0 auto;
+		padding: 0 16px;
+	}
+	&-fieldset {
+		border: none;
+		@include marg-pad-0;
+	}
+	&-fieldset label {
+		@include txt(lato, 300, normal, 11px, #000);
+	}
+	&-span {
+		display: block;
+		margin: 0 0 20px 0;
+		@include txt(lato, 300, normal, 16px, #222222);
+		&-margin {
+			margin: 34px 0 20px 0;
+		}
+	}
+	&-input {
+		display: block;
+		margin: 0 0 20px 0;
+		padding: 0 0 0 16px;
+		width: 360px;
+		height: 45px;
+		@include txt(lato, 300, normal, 13px, #b1b1b1);
+	}
+	&-p {
+		width: 360px;
+		@include txt(lato, 300, normal, 13px, #b1b1b1);
+	}
+	&-btn {
+		border: none;
+		background-color: $main-color;
+		text-transform: uppercase;
+		@include txt(lato, 400, normal, 14px, #fff);
+		padding: 13px 30px 16px 30px;
+	}
+	&-btn::after {
+		content: "\2192";
+		margin: 0 0 0 20px;
+		font-size: 20px;
+	}
+	&-btn:hover {
+		color: #000;
+		background-color: transparent;
+		outline: 1px solid black;
+	}
+	&-btn:active {
+		transform: $tsp;
+	}
+	&-info {
+		width: 100%;
+		max-width: 652px;
+		padding: 0 0 0 16px;
+	}
+	&-info span {
+		@include txt(lato, 300, normal, 24px, #000);
+		text-transform: uppercase;
+	}
+	&-info p {
+		@include txt(lato, 300, normal, 24px, #000);
+	}
+	&-info ul {
+		margin: 0;
+		list-style-type: none;
+	}
+	&-list {
+		position: relative;
+		@include txt(lato, 300, normal, 24px, #000);
+		margin: 16px 0;
+	}
+	&-list::before {
+		content: url(../img/check-mark.svg);
+		position: absolute;
+		left: -35px;
+	}
+}
+/* 
+############################################################  
+End registration page 
+############################################################ 
+*/

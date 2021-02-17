@@ -1,0 +1,21 @@
+@mixin flex-justify($display: flex, $justify: space-between) {
+    display: $display;
+    justify-content: $justify;
+}
+
+@mixin page-padding {
+    padding: 0 230px;
+}
+
+@mixin marg-pad-0 {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin txt($family: lato, $weight: 400, $style: normal, $size: 14px, $color:#000) {
+    font-family: $family;
+    font-weight: $weight;
+    font-style: $style;
+    font-size: $size;
+    color: $color;
+}

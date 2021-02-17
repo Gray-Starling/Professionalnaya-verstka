@@ -1,0 +1,303 @@
+/* 
+############################################################  
+Start index page 
+############################################################ 
+*/
+.main-tagline {
+	width: 100%;
+	background-color: #f1e4e6;
+	&-wp {
+		max-width: 1140px;
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+		padding: 0 32px;
+	}
+	&-img {
+		display: block;
+		width: $content-width/2;
+		padding: 0 0 66.668% 0;
+		background-image: url(../img/layer_57_2.png);
+		background-repeat: no-repeat;
+		background-position: left center;
+		background-size: contain;
+	}
+	&-txt {
+		padding: 25.44% 0 0 0;
+		width: $content-width/2;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		&-wp {
+			position: relative;
+			padding: 0 0 0 0;
+			&:before {
+				content: "";
+				display: block;
+				height: 92px;
+				width: 12px;
+				background-color: $main-color;
+				position: absolute;
+				top: -5px;
+			}
+		}
+		&-firstrow {
+			margin: 0 0 0 20px;
+			@include txt(lato, 900, normal, 48px, #000);
+			text-transform: uppercase;
+			line-height: 40px;
+		}
+		&-secondrow {
+			margin: 0 0 0 20px;
+			@include txt(lato, 700, normal, 32px, #000);
+			text-transform: uppercase;
+		}
+		&-secondrow span {
+			color: $main-color;
+		}
+	}
+}
+.main-catalog {
+	margin: 65px auto;
+	width: 100%;
+	max-width: $content-width;
+	&-wp {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		padding: 0 16px;
+	}
+	&-womenbox,
+	&-menbox,
+	&-kidsbox {
+		min-height: 260px;
+		width: 30%;
+		text-align: center;
+		@include txt(lato, 400, normal, 16px, #fff);
+		text-transform: uppercase;
+		text-decoration: none;
+		transition: all 0.4s;
+		&:hover {
+			transform: scale(1.03);
+		}
+		&:active {
+			transform: scale(0.95);
+		}
+	}
+	&-womenbox {
+		background-image: $bgimg-index-catalog, url(../img/1-for-women.jpg);
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	&-menbox {
+		background-image: $bgimg-index-catalog, url(../img/2-for-men.jpg);
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	&-kidsbox {
+		background-image: $bgimg-index-catalog, url(../img/3-for-kids.jpg);
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	&-accesories {
+		height: 180px;
+		width: 100%;
+		margin: 30px 0 0 0;
+		text-align: center;
+		@include txt(lato, 400, normal, 16px, #fff);
+		text-transform: uppercase;
+		text-decoration: none;
+		background-image: $bgimg-index-catalog, url(../img/4-accesories.jpg);
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		transition: all 0.4s;
+		&:hover {
+			transform: scale(1.03);
+		}
+		&:active {
+			transform: scale(0.95);
+		}
+	}
+	&-desc {
+		display: block;
+		padding: 105px 0 0 0;
+	}
+	&-name,
+	&-desc span {
+		display: block;
+		@include txt(lato, 700, normal, 24px, $main-color);
+	}
+	&-inline-desc {
+		display: block;
+		padding: 65px 0 0 0;
+	}
+}
+.main-weekfeature {
+	width: 100%;
+	max-width: 1140px;
+	margin: 96px auto 0 auto;
+	&-header {
+		text-align: center;
+		&-title {
+			display: block;
+			@include txt(lato, 400, normal, 30px, #222222);
+		}
+		&-desc {
+			@include txt(lato, 400, normal, 14px, #9f9f9f);
+			margin: 6px 0 18px 0;
+		}
+	}
+	&-products {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	&-prod {
+		width: 360px;
+		height: 581px;
+		margin: 30px 0 0 0;
+		position: relative;
+		background-color: #f8f8f8;
+		&-title {
+			display: block;
+			@include txt(lato, 400, normal, 13px, #000);
+			text-transform: uppercase;
+			margin: 25px 0 0 18px;
+		}
+		&-desc {
+			@include txt(lato, 300, normal, 14px, #5d5d5d);
+			margin: 12px 28px 0 16px;
+			box-sizing: border-box;
+		}
+		&-price {
+			display: block;
+			@include txt(lato, 400, normal, 16px, $main-color);
+			margin: 18px 0 20px 18px;
+		}
+	}
+	&-prod-img {
+		display: block;
+	}
+	&-prod:hover &-prod-img {
+		filter: brightness(50%);
+	}
+	&-prod:hover &-btn {
+		display: flex;
+		@include txt(lato, 400, normal, 14px, #fff);
+	}
+	&-prod:hover &-btn:hover {
+		background-color: rgba(58, 56, 56, 1);
+		border: 1px solid #000;
+	}
+	&-prod:hover &-btn:active {
+		transform: $tsp;
+	}
+	&-prod:hover &-btn:focus {
+		outline: transparent;
+	}
+	&-btn {
+		position: absolute;
+		top: 188px;
+		left: 111px;
+		width: 138px;
+		height: 43px;
+		background-size: 26px;
+		background-position: 10% 50%;
+		background-repeat: no-repeat;
+		background-image: url(../img/cart.svg);
+		border: 1px solid #fff;
+		background-color: transparent;
+		@include txt(lato, 400, normal, 14px, #fff);
+		cursor: pointer;
+		@include flex-justify(none, flex-end);
+		align-items: center;
+		padding: 0 16px 0 0;
+	}
+	&-morelink {
+		display: block;
+		width: 211px;
+		margin: 48.5px auto 0 auto;
+		padding: 14.5px 38.5px 13.5px 38.5px;
+		border: 1px solid #ff6a6a;
+		text-align: center;
+		text-decoration: none;
+		@include txt(lato, 400, normal, 16px, $main-color);
+	}
+	&-morelink:hover {
+		background-color: $main-color;
+		color: #fff;
+	}
+	&-morelink:active {
+		transform: $tsp;
+	}
+}
+.main-feature {
+	margin: 95px 0 0 0;
+	background-color: #222222;
+	@include txt(lato, 400, normal, 14px, #fff);
+	&-wp {
+		width: 100%;
+		max-width: 1140px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&-box1,
+	&-box2,
+	&-box3 {
+		position: relative;
+		width: 360px;
+		text-align: center;
+		margin: 103px 0;
+		box-sizing: border-box;
+	}
+	&-box1:before,
+	&-box2:before,
+	&-box3:before {
+		content: "";
+		position: absolute;
+		margin: auto;
+		background-repeat: no-repeat;
+		background-position: 50% 0;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 50px;
+		width: 50px;
+	}
+	&-box1:before {
+		background-image: url(../img/delivery.svg);
+		background-size: 45px 32px;
+	}
+	&-box2:before {
+		background-image: url(../img/discounts.svg);
+		background-size: 40px;
+	}
+	&-box3:before {
+		background-image: url(../img/quality.svg);
+		background-size: 47px 35px;
+	}
+	&-title {
+		display: block;
+		@include txt(lato, 400, normal, 20px, #fbfbfb);
+		padding: 59px 0 16px 0;
+	}
+	&-desc {
+		margin: 0;
+		padding: 0 20px 0 20px;
+		box-sizing: border-box;
+		@include txt(lato, 300, normal, 14px, #fbfbfb);
+	}
+}
+/* 
+############################################################  
+End index page
+############################################################ 
+*/

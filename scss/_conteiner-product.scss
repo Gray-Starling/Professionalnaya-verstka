@@ -1,0 +1,178 @@
+/* 
+############################################################
+Start product page
+############################################################
+*/
+.main-product {
+	&-slider {
+		@include flex-justify;
+		align-items: center;
+		max-width: 1600px;
+		background-color: #f7f7f7;
+		&-wp {
+			@include flex-justify;
+			align-items: center;
+			width: 100%;
+			max-width: 1600px;
+			margin: 0 auto;
+		}
+		&-img {
+			width: 100%;
+			max-width: 597px;
+			height: 100%;
+			max-height: 724px;
+			margin: 11px 0 42px 0;
+			& img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+		&-leftarrow,
+		&-rightarrow {
+			width: 47px;
+			height: 47px;
+			background-color: rgba(42, 42, 42, 0.15);
+			& button {
+				background-color: transparent;
+				border: none;
+				width: 47px;
+				height: 47px;
+				@include flex-justify(flex, center);
+				align-items: center;
+				padding: 0;
+				&:active {
+					transform: $tsp;
+				}
+			}
+		}
+		&-leftarrow button:hover &-leftarrow-svg,
+		&-rightarrow button:hover &-rightarrow-svg {
+			fill: red;
+		}
+		&-leftarrow-svg,
+		&-rightarrow-svg {
+			width: 12px;
+			height: 21px;
+			padding: 0;
+		}
+	}
+	&-desc {
+		position: absolute;
+		top: -65px;
+		@include flex-justify(flex, space-between);
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		max-width: 1140px;
+		min-height: 600px;
+		border: 1px solid #eaeaea;
+		background-color: #fff;
+		&-wp {
+			position: relative;
+			min-height: 600px;
+			width: 100%;
+			max-width: 1140px;
+			margin: 0 auto;
+		}
+	}
+	&-categoryname,
+	&-name,
+	&-price {
+		display: block;
+	}
+	&-categoryname {
+		position: relative;
+		@include txt(lato, 300, normal, 14px, $main-color);
+		text-transform: uppercase;
+		margin: 64.5px 0 0 0;
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 30px;
+			left: 0;
+			right: 0;
+			margin: auto;
+			background-color: $main-color;
+			width: 63px;
+			height: 3px;
+		}
+	}
+	&-name {
+		@include txt(lato, 300, normal, 18px, #4d4d4d);
+		text-transform: uppercase;
+	}
+	&-fulldesc {
+		text-align: center;
+		max-width: 570px;
+		@include txt(lato, 300, normal, 14px, #5e5e5e);
+		margin: 0;
+	}
+	&-price {
+		@include txt(lato, 300, normal, 24px, $main-color);
+	}
+	&-hr {
+		display: block;
+		margin: 0 auto;
+		width: 641px;
+		border: 1px solid #eaeaea;
+	}
+	&-filter-color,
+	&-filter-size,
+	&-filter-quantity {
+		background-color: transparent;
+		border: none;
+		@include txt(lato, 400, normal, 14px, #6f6e6e);
+		text-transform: uppercase;
+		margin: 0 28px 0 0;
+		cursor: pointer;
+		&::after {
+			content: "\02C5";
+			margin: 0 0 0 10px;
+		}
+		&:hover {
+			background-color: $main-color;
+			border-radius: 10px;
+			color: #fff;
+		}
+		&:active {
+			transform: $tsp;
+		}
+	}
+	&-btn {
+		width: 211px;
+		height: 47px;
+		border: 1px solid $main-color;
+		background-color: transparent;
+		@include txt(lato, 400, normal, 16px, $main-color);
+		cursor: pointer;
+		@include flex-justify(flex, flex-start);
+		align-items: center;
+		margin: 0 0 64.5px 0;
+		& svg {
+			fill: $main-color;
+			margin: 0 23px;
+		}
+		&:hover {
+			background-color: $main-color;
+			color: #fff;
+			& svg {
+				fill: #fff;
+			}
+		}
+		&:active {
+			transform: $tsp;
+		}
+	}
+	&-custom {
+		width: 100%;
+		max-width: 1140px;
+		margin: 0 auto 128px auto;
+		padding: 51px 0 0 0;
+	}
+}
+/* 
+############################################################ 
+End product page
+############################################################ 
+*/

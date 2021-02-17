@@ -1,0 +1,154 @@
+/* 
+############################################################  
+Start footer 
+############################################################ 
+*/
+
+.subscribe {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	padding: 0 16px;
+	background-image: url(../img/subscribe-back.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 448px;
+	box-sizing: border-box;
+	&-wp {
+		width: 100%;
+		max-width: 1140px;
+		height: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0 auto;
+	}
+
+	&-comment-span-normal {
+		display: block;
+		padding: 30px 0 0 0;
+		width: 360px;
+		@include txt(lato, 400, normal, 20px, #222224);
+	}
+
+	&-comment-span-italic {
+		@include txt(lato, 400, italic, 20px, #222224);
+	}
+
+	&-email-heading {
+		display: block;
+		@include txt(lato, 700, normal, 24px, #222224);
+		text-transform: uppercase;
+	}
+
+	&-email-txt {
+		display: block;
+		@include txt(lato, 400, normal, 18px, #222224);
+		text-transform: uppercase;
+	}
+
+	&-email-form {
+		margin: 32px 0 0 0;
+		display: flex;
+		align-items: center;
+		text-align: center;
+	}
+
+	&-email-input {
+		border-radius: 25px 0 0 25px;
+		width: 234px;
+		min-height: 50px;
+		background-color: #e1e1e1;
+		@include txt(lato, 400, normal, 14px, #222224);
+		padding: 0 0 0 22px;
+		border: none;
+	}
+
+	&-email-btn {
+		width: 100px;
+		min-height: 50px;
+		border-radius: 0 25px 25px 0;
+		background-color: $main-color;
+		@include txt(lato, 400, normal, 14px, #fff);
+		border: none;
+		cursor: pointer;
+	}
+
+	&-email-btn:hover {
+		box-shadow: 0 0 10px 0 $main-color;
+	}
+
+	&-email-btn:active {
+		transform: $tsp;
+	}
+}
+
+.copy {
+	display: flex;
+	background-color: #222222;
+	padding: 0 32px;
+	min-height: 79px;
+	&-wp {
+		width: 100%;
+		max-width: 1140px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0 auto;
+	}
+
+	&-txt {
+		@include txt(lato, 400, normal, 16px, #fbfbfb);
+	}
+
+	&-social {
+		@include flex-justify(flex, center);
+		align-items: center;
+
+		&-facebook,
+		&-instagram,
+		&-pinterest,
+		&-twiter {
+			border: none;
+			background-color: #fff;
+			margin: 0 7px;
+			padding: 0;
+			width: 40px;
+			height: 40px;
+			@include flex-justify(flex, center);
+			align-items: center;
+		}
+
+		&-facebook:hover,
+		&-instagram:hover,
+		&-pinterest:hover,
+		&-twiter:hover {
+			background-color: $main-color;
+		}
+
+		&-facebook:active,
+		&-instagram:active,
+		&-pinterest:active,
+		&-twiter:active {
+			transform: $tsp;
+		}
+
+		&-svg {
+			fill: #000;
+			width: 40px;
+			height: 40px;
+			padding: 8px;
+		}
+
+		&-svg:hover {
+			fill: #fff;
+		}
+	}
+}
+
+/* 
+############################################################  
+End footer 
+############################################################ 
+*/
